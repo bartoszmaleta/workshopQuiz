@@ -11,5 +11,13 @@ function randomQuestion() {
     const dataLength = data.quizcontent.length;
     let question = data.quizcontent[Math.floor(Math.random() * dataLength)];
     return question;
+}
 
+const button = document.querySelector("#random");
+button.addEventListener('click', loadQuestion);
+
+function loadQuestion() {
+    let question = randomQuestion();
+
+    console.log(question);
 }
