@@ -21,10 +21,9 @@ answers.forEach(answer => {
     answer.addEventListener('click', checkAnswer);
 })
 
-
+let question = randomQuestion();
 
 function loadQuestion() {
-    let question = randomQuestion();
 
     console.log(question);
 
@@ -40,6 +39,11 @@ function loadQuestion() {
 }
 
 function checkAnswer() {
-    console.log(this);
-    alert(this.getAttribute("data-id"))
+    // console.log(this);
+    // alert(this.getAttribute("data-id"));
+    if (question.correct == this.getAttribute("data-id")) {
+        return alert('correct answer');
+    }
+    return alert('Wrong answer!')
+
 }
