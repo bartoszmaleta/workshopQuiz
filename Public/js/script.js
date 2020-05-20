@@ -7,3 +7,9 @@ data = {
     ],
 };
 
+function randomQuestion() {
+    const dataLength = data.quizcontent.length;
+    let question = data.quizcontent[Math.floor(Math.random() * dataLength)];
+    return question;
+
+}
