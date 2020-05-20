@@ -7,11 +7,7 @@ data = {
     ],
 };
 
-function randomQuestion() {
-    const dataLength = data.quizcontent.length;
-    let question = data.quizcontent[Math.floor(Math.random() * dataLength)];
-    return question;
-}
+
 
 const button = document.querySelector("#random");
 button.addEventListener('click', loadQuestion);
@@ -21,9 +17,16 @@ answers.forEach(answer => {
     answer.addEventListener('click', checkAnswer);
 })
 
-let question = randomQuestion();
+let question;
+
+function randomQuestion() {
+    const dataLength = data.quizcontent.length;
+    let question = data.quizcontent[Math.floor(Math.random() * dataLength)];
+    return question;
+}
 
 function loadQuestion() {
+    question = randomQuestion();
 
     console.log(question);
 
@@ -45,5 +48,4 @@ function checkAnswer() {
         return alert('correct answer');
     }
     return alert('Wrong answer!')
-
 }
