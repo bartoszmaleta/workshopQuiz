@@ -16,8 +16,30 @@ function randomQuestion() {
 const button = document.querySelector("#random");
 button.addEventListener('click', loadQuestion);
 
+const answers = document.querySelectorAll(".answers>div");
+answers.forEach(answer => {
+    answer.addEventListener('click', checkAnswer);
+})
+
+
+
 function loadQuestion() {
     let question = randomQuestion();
 
     console.log(question);
+
+    document.getElementById("question").innerText = question.question;
+    const predefinedAnswers = [question.a1, question.a2, question.a3, question.a4];
+
+    let i = 0;
+
+    answers.forEach(answer => {
+        console.log(answer);
+        answer.innerText = predefinedAnswers[i++];
+    })
+}
+
+function checkAnswer() {
+    console.log(this);
+    alert(this)
 }

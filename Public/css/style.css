@@ -22,11 +22,11 @@
     text-align: center;
 }
 
-.questions {
+.answers {
     width: 100%;
 }
 
-.questions > div {
+.answers > div {
     padding: 0.7em;
     border-radius: 1em;
     box-sizing: border-box;
