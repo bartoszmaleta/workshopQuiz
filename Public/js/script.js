@@ -7,8 +7,6 @@ data = {
     ],
 };
 
-
-
 const button = document.querySelector("#random");
 button.addEventListener('click', loadQuestion);
 
