@@ -41,5 +41,5 @@ function loadQuestion() {
 
 function checkAnswer() {
     console.log(this);
-    alert(this)
+    alert(this.getAttribute("data-id"))
 }
